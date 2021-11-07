@@ -24,7 +24,7 @@ const AppointmentBanner = () => {
                             alt="doctor img"
                         />
                     </Grid>
-                    <Grid xs={7}>
+                    <Grid item xs={7}>
                         <Typography style={{ color: '#6dd6d5', fontSize: '18px', margin: '15px 0' }} variant="h6" gutterBottom component="div">
                             APPOINTMENT
                         </Typography>

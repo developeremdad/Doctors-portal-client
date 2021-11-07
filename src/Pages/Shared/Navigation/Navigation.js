@@ -6,7 +6,14 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink } from 'react-router-dom';
+import { Grid } from '@mui/material';
 
+const navBarStyle = {
+    marginRight: '10px',
+    color: '#ffff',
+    textDecoration: 'none'
+}
 const Navigation = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -21,10 +28,21 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Home
-                    </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Grid sx={{ flexGrow: 1, display: 'flex', flexDirection: 'row' }}>
+                        <NavLink style={navBarStyle} to="/home">
+                            <Typography variant="h6" component="div" >
+                                Home
+                            </Typography>
+                        </NavLink>
+                        <NavLink style={navBarStyle} to="/appointment">
+                            <Typography variant="h6" component="div" >
+                                Appointment
+                            </Typography>
+                        </NavLink>
+                    </Grid>
+                    <NavLink style={navBarStyle} to="/">
+                        <Button color="inherit">Login</Button>
+                    </NavLink>
                 </Toolbar>
             </AppBar>
         </Box>

@@ -5,16 +5,20 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import Appointment from './Pages/Appointment/Appointment/Appointment';
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
-          <Home></Home>
+        <Route exact path="/">
+          <Home />
         </Route>
         <Route path="/home">
-          <Home></Home>
+          <Home />
+        </Route>
+        <Route path="/appointment">
+          <Appointment />
         </Route>
       </Switch>
     </Router>

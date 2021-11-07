@@ -4,6 +4,8 @@ import AppointmentBanner from '../AppointmentBanner/AppointmentBanner';
 import Services from '../Services/Services';
 
 const Home = () => {
+    let me = <h1>hello</h1>
+    console.log(me);
     return (
         <div>
             <Navigation></Navigation>
